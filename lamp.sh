@@ -71,7 +71,7 @@ comprobar_error
 
 echo "Habilitamos modulos y Reiniciamos apache"
 echo "----------------------------------------"
-a2enmod proxy proxy_http proxy_ajp rewrite deflate headers proxy_balancerproxy_connecta2enmod proxy_html lbmethod_byrequests
+a2enmod proxy proxy_http proxy_ajp rewrite deflate headers proxy_balancerproxy_connect proxy_html lbmethod_byrequests
 systemctl restart apache2
 
 
