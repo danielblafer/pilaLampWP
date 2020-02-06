@@ -26,7 +26,8 @@ echo "Instalamos Apache2"
 echo "----------------------------------------"
     sudo apt install apache2 -y
     comprobar_error
-
+    rm /var/www/html/index.html
+    
 echo "Instalamos MySQLServer"
 echo "----------------------------------------"
 sudo apt install mysql-server -y
@@ -99,8 +100,5 @@ comprobar_error
 clear
 
 
-echo "Instalamos la base de datos y realizamos una Securizacion"
-echo "----------------------------------------"
-apt-get install mysql-server -y
-clear
+echo "Realizamos una Securizacion"
 mysql_secure_installation
