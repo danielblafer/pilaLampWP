@@ -88,9 +88,10 @@ clear
 
 echo "Establecemos los permisos necesarios en la carpeta por defecto"
 echo "----------------------------------------"
-chown :www-data /var/www/html/ -R
-find /var/www/html/ -type d -exec chmod 755 {} \;
-find /var/www/html/ -type f -exec chmod 644 {} \;
+cd /var/www/html/
+chown www-data:www-data  -R * 
+find . -type d -exec chmod 755 {} \;  
+find . -type f -exec chmod 644 {} \;
 
 echo "Recargamos la configuracion de Apache 'por si acaso'"
 echo "----------------------------------------"
