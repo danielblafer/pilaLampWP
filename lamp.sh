@@ -104,18 +104,3 @@ echo "----------------------------------------"
 apt-get install mysql-server -y
 clear
 mysql_secure_installation
-
-echo "Estado"
-echo "------------------------------------------------------"
-systemctl status mysql.service | grep Active
-echo "----------------------------------------"
-echo "--RECUERDA NECESITAMOS CREAR UN USUARIO EN LA BBDD---"
-echo "------------------------------------------------------"
-echo "Recordatorio (ejemplo):"
-echo "----------------------------------------"
-
-echo "create database wordpress;"
-echo "use wordpress;"
-echo "CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'usuario+';"
-echo "GRANT ALL PRIVILEGES ON * . * TO 'usuario'@'localhost';"
-echo "FLUSH PRIVILEGES;"
