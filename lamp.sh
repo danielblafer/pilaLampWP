@@ -11,7 +11,7 @@ clear
 
 echo "Comenzamos a Upgradear el sistema"
 echo "----------------------------------------"
-sudo apt-get upgrade -y
+apt-get upgrade -y
 
 comprobar_error
 
@@ -19,48 +19,48 @@ comprobar_error
 
 echo "Comenzamos a actualizar el sistema"
 echo "----------------------------------------"
-    sudo apt-get update -y
+    apt-get update -y
     comprobar_error
 
 echo "Instalamos Apache2"
 echo "----------------------------------------"
-    sudo apt install apache2 -y
+    apt install apache2 -y
     comprobar_error
     rm /var/www/html/index.html
     
 echo "Instalamos MySQLServer"
 echo "----------------------------------------"
-sudo apt install mysql-server -y
+apt install mysql-server -y
 comprobar_error
 
 echo "Instalamos PHP"
 echo "----------------------------------------"
-sudo apt install php -y
+apt install php -y
 comprobar_error
 
 echo "Instalamos la dependencia mysql para php"
 echo "----------------------------------------"
-sudo apt install php-mysql -y
+apt install php-mysql -y
 comprobar_error
 
 echo "Instalamos el modulo libApache"
 echo "----------------------------------------"
-sudo apt install libapache2-mod-php -y
+apt install libapache2-mod-php -y
 comprobar_error
 
 echo "Instalamos el Cliente PHP"
 echo "----------------------------------------"
-sudo apt install php-cli -y
+apt install php-cli -y
 comprobar_error
 
 echo "Habilitamos Y Reiniciamos Apache"
 echo "----------------------------------------"
-sudo systemctl enable apache2
-sudo systemctl start apache2
+systemctl enable apache2
+systemctl start apache2
 
 echo "----------------------------------------"
 echo "Ajustamos los permisos"
-sudo chmod -R 0755 /var/www/html/
+chmod -R 0755 /var/www/html/
 
 clear
 
